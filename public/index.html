@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>My Project 2</title>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.4.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <!-- <script defer src="/__/firebase/9.4.0/firebase-auth-compat.js"></script> -->
+    <script defer src="/__/firebase/9.4.0/firebase-database-compat.js"></script>
+    <!-- <script defer src="/__/firebase/9.4.0/firebase-firestore-compat.js"></script>
+      <script defer src="/__/firebase/9.4.0/firebase-functions-compat.js"></script>
+      <script defer src="/__/firebase/9.4.0/firebase-messaging-compat.js"></script>
+      <script defer src="/__/firebase/9.4.0/firebase-storage-compat.js"></script>
+      <script defer src="/__/firebase/9.4.0/firebase-analytics-compat.js"></script>
+      <script defer src="/__/firebase/9.4.0/firebase-remote-config-compat.js"></script>
+      <script defer src="/__/firebase/9.4.0/firebase-performance-compat.js"></script> -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+  </head>
+  <body>
+    <!-- Header section-->
+    <section id="header">
+      <div class="header container">
+        <div class="nav-bar">
+          <div class="brand">
+            <a href="#hero"
+              ><h1><span>T</span>hanh<span>B</span>ao</h1></a
+            >
+          </div>
+          <div class="nav-list">
+            <div class="hamburger"><div class="bar"></div></div>
+            <ul>
+              <li><a href="#hero" data-after="Home">Home</a></li>
+              <li><a href="#services" data-after="Control">Control</a></li>
+              <li><a href="#projects" data-after="Projects">Projects</a></li>
+              <li><a href="#about" data-after="About">About</a></li>
+              <li><a href="#contact" data-after="Contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End header section -->
+    <!-- Hero section -->
+    <section id="hero">
+      <div class="hero container">
+        <div>
+          <h1>Hello, <span></span></h1>
+          <h1>My Name is <span></span></h1>
+          <h1>ThanhBao <span></span></h1>
+          <a href="#services" type="button" class="cta">Get started</a>
+        </div>
+      </div>
+    </section>
+    <!-- End hero section -->
+    <!-- Service section -->
+    <section id="services">    
+      <div class="services container">
+        <div class="services-top">
+          <h1 class="section-title">Con<span>t</span>rol</h1>
+          <p>
+            Hello this is my project 2, You can control the fan with 3 levels and timing turn on/off the fan.
+          </p>
+        </div>
+        <div class="services-bottom">
+            <div class="services-fan">
+                <br><br>
+                <form id="control" style="margin-top: 30px;">
+                  <input type="radio" id="stop" name="fan">
+                  <label for="stop" id="stop_active" >Stop</label>
+            
+                  <input type="radio" id="low" name="fan">
+                  <label for="low" id="low_active">Low</label>
+            
+                  <input type="radio" id="second" name="fan">
+                  <label for="second" id="mdm_active">Medium</label>
+            
+                  <input type="radio" id="third" name="fan" onclick="">
+                  <label for="third" id="high_active">High</label>
+            
+                  <div class="svg">
+                    <img class="wings" src="./img/fanblade.png" alt="Fan">
+                  </div>
+                </form>
+            </div>
+            <div class="timer">
+              <select id="time" >
+                <option value="5000">5 giây</option>
+                <option value="10000">10 giây</option>
+                <option value="30000">30 giây</option>
+                <option value="60000">1 phút</option>
+                <option value="120000">2 phút</option>
+                <option value="300000">5 phút</option>
+                <option value="600000">10 phút</option>
+              </select>
+              <span class="custom-arrow"></span>
+            </div>
+            <div class="timerBtn">
+              <button id="timerBtnStart">Start</button>
+              <button id="timerBtnStop">Stop</button>
+            </div>
+            <div class="progress-bar" style="--width: 0" data-label="Loading..."></div>
+        </div>
+      </div>
+    </section>
+    <!-- End Service section -->
+    <!-- Project section -->
+    <section id="projects">
+      <div class="projects container">
+        <div class="projects-header">
+          <h1 class="section-title">Recent <span>Project</span></h1>
+        </div>
+        <div class="all-projects">
+          <div class="projects-item">
+            <div class="projects-info">
+              <h1>Firebase</h1>
+              <h2>A story about Firebase</h2>
+              <p>
+                Firebase evolved from Envolve, a prior startup founded by James
+                Tamplin and Andrew Lee in 2011. Envolve provided developers an
+                API that enables the integration of online chat functionality
+                into their websites. After releasing the chat service, Tamplin
+                and Lee found that it was being used to pass application data
+                that were not chat messages. Developers were using Envolve to
+                sync application data such as game state in real time across
+                their users. Tamplin and Lee decided to separate the chat system
+                and the real-time architecture that powered it. They founded
+                Firebase as a separate company in 2011 and it launched to the
+                public in April 2012.
+              </p>
+            </div>
+            <div class="project-img">
+              <img src="./img/firebase.jpg" alt="image" />
+            </div>
+          </div>
+          <div class="projects-item">
+            <div class="projects-info">
+              <h1>ESP32</h1>
+              <h2>A story about ESP32</h2>
+              <p>
+                ESP32 is a series of low-cost, low-power system on a chip
+                microcontrollers with integrated Wi-Fi and dual-mode Bluetooth.
+                ESP32 is created and developed by Espressif Systems, a
+                Shanghai-based Chinese company, and is manufactured by TSMC
+                using their 40 nm process. It is a successor to the ESP8266
+                microcontroller.
+              </p>
+            </div>
+            <div class="project-img">
+              <img src="./img/ESP32.png" alt="image" />
+            </div>
+          </div>
+          <div class="projects-item">
+            <div class="projects-info">
+              <h1>L298N</h1>
+              <h2>A story about L298N</h2>
+              <p>
+                The L298N is a high voltage , high current dual full-bridge
+                driver to accept standard TTL logic level sand drive inductive
+                loads such as relays, solenoids, DC and stepping motors.
+              </p>
+            </div>
+            <div class="project-img">
+              <img src="./img/L298N.jpg" alt="image" />
+            </div>
+          </div>
+          <div class="projects-item">
+            <div class="projects-info">
+              <h1>HTML, CSS & JS</h1>
+              <h2>A story about HTML, CSS & JS</h2>
+              <p>
+                They are programing language. HTML provides the basic structure
+                of sites, which is enhanced and modified by other technologies
+                like CSS and JavaScript. CSS is used to control presentation,
+                formatting, and layout. JavaScript is used to control the
+                behavior of different elements.
+              </p>
+            </div>
+            <div class="project-img">
+              <img src="./img/img-3.png" alt="image" />
+            </div>
+          </div>
+          <div class="projects-item">
+            <div class="projects-info">
+              <h1>Project 5</h1>
+              <h2>A story about JS</h2>
+              <p>
+                We are in 1995. The invention of the web is barely 4 years old
+                and to connect to the internet we need to do it with a 56k modem
+                router that has an endearing melody. If we connect to the
+                network, we'll lose our phone at home. And the connection is
+                charged at the cost of the phone call. Considering the
+                technological difficulties of the moment, the people who connect
+                to the Internet are quite a lot.
+              </p>
+            </div>
+            <div class="project-img">
+              <img src="./img/img-1.png" alt="image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Project section -->
+    <!-- About Section -->
+    <section id="about">
+      <div class="about container">
+        <div class="col-left">
+          <div class="about-img">
+            <img src="./img/me.jpg" alt="image" />
+          </div>
+        </div>
+        <div class="col-right">
+          <h1 class="section-title">About <span>me</span></h1>
+          <h2>Web Developer</h2>
+          <p>This is all sources code of this project.</p>
+          <a href="#" type="button" class="cta">Download Resume</a>
+        </div>
+      </div>
+    </section>
+    <!-- End About Section -->
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="contact container">
+        <div class="contact-top">
+          <h1 class="section-title">Contact <span>Info</span></h1>
+        </div>
+        <div class="contact-items">
+          <div class="contact-item">
+            <img
+              class="icon"
+              src="https://img.icons8.com/bubbles/50/000000/phone.png"
+            />
+            <div class="contact-info">
+              <h1>Phone</h1>
+              <h2>Phone number 1</h2>
+              <h2>Phone number 2</h2>
+            </div>
+          </div>
+          <div class="contact-item">
+            <img
+              class="icon"
+              src="https://img.icons8.com/doodle/48/000000/gmail-new.png"
+            />
+            <div class="contact-info">
+              <h1>Email</h1>
+              <h2>tranthanhbao@gmail.com</h2>
+            </div>
+          </div>
+          <div class="contact-item">
+            <img
+              class="icon"
+              src="https://img.icons8.com/bubbles/50/000000/address.png"
+            />
+            <div class="contact-info">
+              <h1>Address</h1>
+              <h2>District 2, HCM city, Viet Nam</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Contact Section -->
+
+    <!-- Footer -->
+    <section id="footer">
+      <div class="footer container">
+        <div class="brand">
+          <h1><span>T</span>hanh <span>B</span>ao</h1>
+        </div>
+        <h2>Your Complete Web Solution</h2>
+        <div class="social-icon">
+          <div class="social-item">
+            <a href="https://www.facebook.com/thanhbaoisme/">
+              <img
+                src="https://img.icons8.com/fluent/48/000000/facebook-new.png"
+              />
+            </a>
+          </div>
+          <div class="social-item">
+            <a href="https://zalo.me/0825697769">
+              <img src="https://img.icons8.com/dusk/64/000000/zalo.png" />
+            </a>
+          </div>
+          <div class="social-item">
+            <a href="https://www.instagram.com/emsitb/">
+              <img
+                src="https://img.icons8.com/fluent/50/000000/instagram-new.png"
+              />
+            </a>
+          </div>
+        </div>
+        <p>Copyright © 2021 Bao. All rights reserved.</p>
+      </div>
+    </section>
+    <!-- End Footer -->
+    <!-- <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script> -->
+    <script type="text/javascript" src="./app.js"></script>
+  </body>
+</html>
